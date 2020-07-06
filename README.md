@@ -9,7 +9,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 
 # 使用
 
-主要使用项目中  `RoundFrameLayout` 和 `RoundImageView`这两个控件，它们具有如下公共属性：
+项目中主要有  `RoundFrameLayout` 和 `RoundImageView`这两个控件，它们具有如下公共属性：
 
 |         属性名         |                           含义                           |
 | :--------------------: | :------------------------------------------------------: |
@@ -19,7 +19,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 | rd_bottom_left_radius  |            尺寸值，设置 View 左下角的圆角半径            |
 | rd_bottom_right_radius |            尺寸值，设置 View右下角的圆角半径             |
 
-关于 `rd_radius` 属性，其除了通常尺寸可以设置为一个内置的枚举值：`circle`，这样整个 View 会被裁剪成一个正圆形！
+关于 `rd_radius` 属性，其除了通常尺寸值外还可以设置为一个内置的枚举值：`circle`，这样整个 View 会被裁剪成一个正圆形！
 
 当然你还可以通过把 `rd_radius` 属性的值设的很大或随便一个负尺寸值，这样也可以得到一个正圆形！
 
@@ -35,7 +35,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 
 
 
-关于`rd_stroke_mode`属性，其含义是给当前`RoundImageView`的描边模式，是一个枚举值，只能取 `padding` 或 `overlay`这两者之一，两个枚举值含义如下：
+关于`rd_stroke_mode`属性，其含义是当前`RoundImageView`的描边模式，是一个枚举值，只能取 `padding` 或 `overlay`这两者之一。这两个枚举值含义如下：
 
 
 
