@@ -74,6 +74,8 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 
 效果：
 
+<img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_frame.jpg">
+
 
 
 ```xml
@@ -98,3 +100,4 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 
 效果：
 
+<img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_image.jpg">
