@@ -28,7 +28,6 @@ public class RoundFrameLayout extends FrameLayout implements RoundStatus {
     private final int INVALID_VALUE = -1;
     //整个 View 的圆角信息都在这个对象里面
     private RoundStatus mRoundStatus;
-
     //圆角效果主要存在这个路径里
     private Path mPath;
     //圆角矩形描述

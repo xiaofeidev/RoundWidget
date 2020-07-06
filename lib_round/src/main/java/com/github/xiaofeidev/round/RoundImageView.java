@@ -32,13 +32,15 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
     public static final int STROKE_MODE_PADDING = 0;
     //描边绘制模式，直接覆盖到图片的像素上面
     public static final int STROKE_MODE_OVERLAY = 1;
-
+    //整个 View 的圆角信息都在这个对象里面
     private RoundStatus mRoundStatus;
+    //描边的圆角信息
     private RoundStatus mRoundStatusStroke;
-
+    //圆角效果主要存在这个路径里
     private Path mPath;
+    //圆角矩形描述
     private RectF mRectF;
-
+    //画笔
     private Paint mPaint;
 
     //描边的路径
