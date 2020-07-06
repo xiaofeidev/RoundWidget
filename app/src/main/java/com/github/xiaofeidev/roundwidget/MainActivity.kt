@@ -1,4 +1,4 @@
-package com.github.xiaofeidev.roundweight
+package com.github.xiaofeidev.roundwidget
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

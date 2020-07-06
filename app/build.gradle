@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.github.xiaofeidev.roundweight"
+        applicationId "com.github.xiaofeidev.roundwidget"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1

@@ -1,4 +1,4 @@
-package com.github.xiaofeidev.roundweight
+package com.github.xiaofeidev.roundwidget
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.github.xiaofeidev.roundweight", appContext.packageName)
+        assertEquals("com.github.xiaofeidev.roundwidget", appContext.packageName)
     }
 }

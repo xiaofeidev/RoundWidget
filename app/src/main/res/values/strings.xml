@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoundWeight</string>
+    <string name="app_name">RoundWidget</string>
 
     <string name="hint_1">RoundFrameLayout：</string>
     <string name="hint_2">RoundImageView：</string>
