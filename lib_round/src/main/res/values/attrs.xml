@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="rd_radius" format="dimension">
+        <enum name="circle" value="-1"/>
+    </attr>
+    <attr name="rd_top_left_radius" format="dimension" />
+    <attr name="rd_top_right_radius" format="dimension" />
+    <attr name="rd_bottom_left_radius" format="dimension" />
+    <attr name="rd_bottom_right_radius" format="dimension" />
+
+    <declare-styleable name="RoundFrameLayout">
+        <attr name="rd_radius"/>
+        <attr name="rd_top_left_radius"/>
+        <attr name="rd_top_right_radius"/>
+        <attr name="rd_bottom_left_radius"/>
+        <attr name="rd_bottom_right_radius"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="rd_radius"/>
+        <attr name="rd_top_left_radius"/>
+        <attr name="rd_top_right_radius"/>
+        <attr name="rd_bottom_left_radius"/>
+        <attr name="rd_bottom_right_radius"/>
+        <!--ImageView 描边宽度-->
+        <attr name="rd_stroke_width" format="dimension" />
+        <!--ImageView 描边颜色-->
+        <attr name="rd_stroke_color" format="color|reference" />
+        <!--ImageView 描边模式-->
+        <attr name="rd_stroke_mode" format="enum">
+            <!--ImageView 描边模式，内边距模式，描边不覆盖底下图片像素-->
+            <enum name="padding" value="0"/>
+            <!--ImageView 描边模式，覆盖模式，描边直接覆盖底下图片像素-->
+            <enum name="overlay" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
