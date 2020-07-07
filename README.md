@@ -1,4 +1,4 @@
-# RoundWidget
+# RoundWidget [ ![Download](https://api.bintray.com/packages/xiaofei00/xiaofei/RoundWidget/images/download.svg) ](https://bintray.com/xiaofei00/xiaofei/RoundWidget/_latestVersion)
 Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角 `ImageView`，
 详见项目代码中的 `RoundFrameLayout` 和 `RoundImageView`。
 详细使用方法及实现原理稍后补充！
