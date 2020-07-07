@@ -30,3 +30,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
+
+//build.gradle 文末
+//bintray-config.gradle 就是跟 build.gradle 同层目录下的一个 gradle 文件，里面就是单纯将 exe {} 这块代码里的变量声明和赋值拷贝至 bintray-config.gradle 文件里
+apply from: '../bintray-config.gradle'
+apply from: '../bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

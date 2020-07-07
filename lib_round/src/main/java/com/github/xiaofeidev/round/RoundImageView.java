@@ -132,7 +132,7 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
         mPath = new Path();
         mPathStroke = new Path();
         mRectF = new RectF();
-        mRoundStatus.fillRadius();
+        fillRadius();
         mRoundStatusStroke.fillRadius();
 
         mPaint = new Paint();
@@ -161,12 +161,12 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
             //Path 的填充模式为反奇偶规则
             mPath.setFillType(Path.FillType.INVERSE_EVEN_ODD);
             mPathStroke.reset();
-            if (mRoundStatus.getRadius() < 0){
+            if (getRadius() < 0){
                 mPath.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2), Path.Direction.CW);
                 mPathStroke.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2) - mStrokeWidth/2f, Path.Direction.CW);
             } else {
                 mRectF.set(0, 0, w, h);
-                mPath.addRoundRect(mRectF, mRoundStatus.getRadiusList(), Path.Direction.CW);
+                mPath.addRoundRect(mRectF, getRadiusList(), Path.Direction.CW);
                 float strokeOffset = mStrokeWidth/2f;
                 mRectF.set(strokeOffset, strokeOffset,w - strokeOffset, h - strokeOffset);
                 mPathStroke.addRoundRect(mRectF, mRoundStatusStroke.getRadiusList(), Path.Direction.CW);
@@ -204,12 +204,12 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
             //Path 的填充模式为反奇偶规则
             mPath.setFillType(Path.FillType.INVERSE_EVEN_ODD);
             mPathStroke.reset();
-            if (mRoundStatus.getRadius() < 0){
+            if (getRadius() < 0){
                 mPath.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2), Path.Direction.CW);
                 mPathStroke.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2) - mStrokeWidth/2f, Path.Direction.CW);
             } else {
                 mRectF.set(0, 0, w, h);
-                mPath.addRoundRect(mRectF, mRoundStatus.getRadiusList(), Path.Direction.CW);
+                mPath.addRoundRect(mRectF, getRadiusList(), Path.Direction.CW);
                 float strokeOffset = mStrokeWidth/2f;
                 mRectF.set(strokeOffset, strokeOffset,w - strokeOffset, h - strokeOffset);
                 mPathStroke.addRoundRect(mRectF, mRoundStatusStroke.getRadiusList(), Path.Direction.CW);
