@@ -14,7 +14,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 `Gradle`：
 
 ```groovy
-implementation 'com.github.xiaofeidev:round:1.0.0'
+implementation 'com.github.xiaofeidev:round:$latest_version'
 ```
 
 `Maven`：
