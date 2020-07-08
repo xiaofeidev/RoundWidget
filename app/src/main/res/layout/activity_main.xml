@@ -165,7 +165,7 @@
         app:layout_constraintDimensionRatio="1"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="5dp"
-        app:rd_radius="10dp"
+        app:rd_radius="20dp"
         app:rd_stroke_width="4dp"
         app:rd_stroke_color="@android:color/black"
         android:scaleType="fitXY"

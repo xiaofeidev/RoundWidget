@@ -258,35 +258,35 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
     @Override
     public void setRadius(float radius) {
         mRoundStatus.setRadius(radius);
-        mRoundStatusStroke.setRadius(radius);
+        initStroke();
         update();
     }
 
     @Override
     public void setTopLeftRadius(float topLeftRadius) {
         mRoundStatus.setTopLeftRadius(topLeftRadius);
-        mRoundStatusStroke.setTopLeftRadius(topLeftRadius);
+        initStroke();
         update();
     }
 
     @Override
     public void setTopRightRadius(float topRightRadius) {
         mRoundStatus.setTopRightRadius(topRightRadius);
-        mRoundStatusStroke.setTopRightRadius(topRightRadius);
+        initStroke();
         update();
     }
 
     @Override
     public void setBottomRightRadius(float bottomRightRadius) {
         mRoundStatus.setBottomRightRadius(bottomRightRadius);
-        mRoundStatusStroke.setBottomRightRadius(bottomRightRadius);
+        initStroke();
         update();
     }
 
     @Override
     public void setBottomLeftRadius(float bottomLeftRadius) {
         mRoundStatus.setBottomLeftRadius(bottomLeftRadius);
-        mRoundStatusStroke.setBottomLeftRadius(bottomLeftRadius);
+        initStroke();
         update();
     }
 
