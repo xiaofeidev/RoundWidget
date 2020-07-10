@@ -1,7 +1,6 @@
 # RoundWidget [ ![Download](https://api.bintray.com/packages/xiaofei00/xiaofei/RoundWidget/images/download.svg) ](https://bintray.com/xiaofei00/xiaofei/RoundWidget/_latestVersion)
 Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角 `ImageView`，
 详见项目代码中的 `RoundFrameLayout` 和 `RoundImageView`。
-详细使用方法及实现原理稍后补充！
 
 # 界面预览
 
@@ -17,11 +16,11 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 implementation 'com.github.xiaofeidev:round:$latest_version'
 ```
 
-**本库只支持在 `AndroidX` 的依赖场景下使用！**`miniSDK` = 14
+**本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
 
 项目中主要有  `RoundFrameLayout` 和 `RoundImageView`这两个控件，它们具有如下公共属性：
 
-|         属性名         |                           含义                           |
+|         属性名         |                           解释                           |
 | :--------------------: | :------------------------------------------------------: |
 |       rd_radius        | 尺寸值，设置 View 整体四个圆角的半径，会被下面四个值覆盖 |
 |   rd_top_left_radius   |            尺寸值，设置 View 左上角的圆角半径            |
@@ -37,7 +36,7 @@ implementation 'com.github.xiaofeidev:round:$latest_version'
 
 
 
-|     属性名      |                      含义                       |
+|     属性名      |                      解释                       |
 | :-------------: | :---------------------------------------------: |
 | rd_stroke_width |        尺寸值，设置 ImageView 的描边宽度        |
 | rd_stroke_color |        颜色值，设置 ImageView 的描边颜色        |
@@ -49,7 +48,7 @@ implementation 'com.github.xiaofeidev:round:$latest_version'
 
 
 
-| `rd_stroke_mode` 枚举值 |                             含义                             |
+| `rd_stroke_mode` 枚举值 |                             解释                             |
 | :---------------------: | :----------------------------------------------------------: |
 |        `padding`        | 描边的像素不覆盖到下方的图片，通过增加 View padding 的方式实现，此为默认值 |
 |        `overlay`         |                描边的像素直接覆盖到下方图片上                |
