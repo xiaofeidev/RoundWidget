@@ -29,4 +29,11 @@ ext {
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
+
+    //用到的 gradle 命令
+//    gradlew install
+//    gradlew bintrayUpload
+
+//    gradlew install 用于将项目编译、打包生成 pom，aar 等文件；
+//    gradlew bintrayUpload 用于将生成的 pom，aar 等文件上传至 bintray 仓库中；
 }
