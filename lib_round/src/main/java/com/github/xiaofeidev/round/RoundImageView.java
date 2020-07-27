@@ -187,8 +187,8 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
     }
 
     @Override
-    public void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
         canvas.drawPath(mPath, mPaint);
         //开始绘制描边
         if (mStrokeWidth > 0){
