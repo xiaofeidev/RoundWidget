@@ -22,11 +22,11 @@ implementation 'com.github.xiaofeidev:round:$latest_version'
 
 |         属性名         |                           解释                           |
 | :--------------------: | :------------------------------------------------------: |
-|       rd_radius        | 尺寸值，设置 View 整体四个圆角的半径，会被下面四个值覆盖 |
+|       rd_radius        | 尺寸值，设置 View 整体四个圆角的圆角半径，会被下面的值覆盖 |
 |   rd_top_left_radius   |            尺寸值，设置 View 左上角的圆角半径            |
 |  rd_top_right_radius   |            尺寸值，设置 View 右上角的圆角半径            |
 | rd_bottom_left_radius  |            尺寸值，设置 View 左下角的圆角半径            |
-| rd_bottom_right_radius |            尺寸值，设置 View右下角的圆角半径             |
+| rd_bottom_right_radius |            尺寸值，设置 View 右下角的圆角半径             |
 
 关于 `rd_radius` 属性，其除了通常尺寸值外还可以设置为一个内置的枚举值：`circle`，这样整个 View 会被裁剪成一个正圆形！
 
