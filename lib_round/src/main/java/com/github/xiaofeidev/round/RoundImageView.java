@@ -120,7 +120,6 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
     }
 
     private void init(){
-        setWillNotDraw(false);
         //关闭硬件加速
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
 
@@ -162,6 +161,7 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
             mPath.setFillType(Path.FillType.INVERSE_EVEN_ODD);
             mPathStroke.reset();
             if (getRadius() < 0){
+                mRectF.set(0, 0, w, h);
                 mPath.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2), Path.Direction.CW);
                 mPathStroke.addCircle((float) (w / 2), (float) (h / 2), (float) (Math.min(w, h) / 2) - mStrokeWidth/2f, Path.Direction.CW);
             } else {
@@ -185,10 +185,9 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
                     mPaddingBottom + mStrokeWidth);
         }
     }
-
     @Override
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
+    public void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
         canvas.drawPath(mPath, mPaint);
         //开始绘制描边
         if (mStrokeWidth > 0){

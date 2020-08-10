@@ -1,4 +1,6 @@
 ext {
+    def versionCode = 1
+    def versionName = "1.0.2"
     //bintray 网站上你创建的仓库的名字（必配项）
     bintrayRepo = 'xiaofei'
     //在这个仓库下的 package name（必配项）
@@ -10,7 +12,7 @@ ext {
     //以下三项均是必配项
     publishedGroupId = 'com.github.xiaofeidev'
     artifact = 'round'
-    libraryVersion = '1.0.2'
+    libraryVersion = versionName
 
     //以下三项只是对开源库的描述（应该不是必配项吧，没尝试过）
     libraryName = 'RoundWidget'
