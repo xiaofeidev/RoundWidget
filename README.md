@@ -8,7 +8,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 
 # 使用
 
-本库已上传至 jcenter，可直接外部依赖，`Gradle`依赖：
+`Gradle`依赖：
 
 ```groovy
 implementation 'com.github.xiaofeidev:round:$latest_version'
