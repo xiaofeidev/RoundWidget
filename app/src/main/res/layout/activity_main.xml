@@ -121,10 +121,10 @@
         app:rd_radius="10dp"
         app:rd_top_right_radius="40dp"
         app:rd_bottom_left_radius="40dp"
-        app:rd_stroke_mode="padding"
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
-        app:srcCompat="@drawable/ic_profile"/>
+        tools:srcCompat="@drawable/ic_profile"/>
+<!--        app:srcCompat="@drawable/ic_profile"/>-->
 
     <com.github.xiaofeidev.round.RoundImageView
         android:id="@+id/img3"

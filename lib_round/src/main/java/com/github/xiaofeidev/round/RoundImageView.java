@@ -137,7 +137,7 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
     }
 
     private void initStroke(){
