@@ -2,12 +2,16 @@ package com.github.xiaofeidev.round;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -34,6 +38,11 @@ public class RoundFrameLayout extends FrameLayout implements RoundStatus {
     private RectF mRectF;
     //画笔
     private Paint mPaint;
+
+    //绘制缓冲，避免击穿整个 window 的画布出现黑色背景的情况
+    private Bitmap mBitmap = null;
+    private Canvas mCanvas = new Canvas();
+    private Matrix mMatrix = new Matrix();
 
     public RoundFrameLayout(@NonNull Context context) {
         this(context, null);
@@ -84,7 +93,9 @@ public class RoundFrameLayout extends FrameLayout implements RoundStatus {
     private void init(){
         setWillNotDraw(false);
         //关闭硬件加速
-        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        if (Build.VERSION.SDK_INT < 16){
+            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        }
 
         mPath = new Path();
         mRectF = new RectF();
@@ -109,13 +120,20 @@ public class RoundFrameLayout extends FrameLayout implements RoundStatus {
                 mRectF.set(0, 0, w, h);
                 mPath.addRoundRect(mRectF, getRadiusList(), Path.Direction.CW);
             }
+
+            if (mBitmap == null || mBitmap.getWidth() != w || mBitmap.getHeight() != h){
+                mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+                mCanvas.setBitmap(mBitmap);
+            }
         }
     }
 
     @Override
     public void draw(Canvas canvas) {
-        super.draw(canvas);
-        canvas.drawPath(mPath, mPaint);
+        mBitmap.eraseColor(Color.TRANSPARENT);
+        super.draw(mCanvas);
+        mCanvas.drawPath(mPath, mPaint);
+        canvas.drawBitmap(mBitmap, mMatrix, null);
     }
 
     //绘制刷新时的必要逻辑

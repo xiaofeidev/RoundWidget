@@ -2,13 +2,16 @@ package com.github.xiaofeidev.round;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -57,6 +60,11 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
 
     //初始的内边距
     private int mPaddingLeft, mPaddingTop, mPaddingRight, mPaddingBottom;
+
+    //绘制缓冲，避免击穿整个 window 的画布出现黑色背景的情况
+    private Bitmap mBitmap = null;
+    private Canvas mCanvas = new Canvas();
+    private Matrix mMatrix = new Matrix();
 
     public RoundImageView(@NonNull Context context) {
         this(context, null);
@@ -121,7 +129,9 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
 
     private void init(){
         //关闭硬件加速
-        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        if (Build.VERSION.SDK_INT < 16){
+            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+        }
 
         mPaintStroke = new Paint();
         mPaintStroke.setAntiAlias(true);
@@ -173,6 +183,11 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
                 mRectF.set(0, 0, w, h);
             }
             checkPadding();
+
+            if (mBitmap == null || mBitmap.getWidth() != w || mBitmap.getHeight() != h){
+                mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+                mCanvas.setBitmap(mBitmap);
+            }
         }
     }
 
@@ -187,12 +202,14 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
     }
     @Override
     public void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        canvas.drawPath(mPath, mPaint);
+        mBitmap.eraseColor(Color.TRANSPARENT);
+        super.onDraw(mCanvas);
+        mCanvas.drawPath(mPath, mPaint);
         //开始绘制描边
         if (mStrokeWidth > 0){
-            canvas.drawPath(mPathStroke, mPaintStroke);
+            mCanvas.drawPath(mPathStroke, mPaintStroke);
         }
+        canvas.drawBitmap(mBitmap, mMatrix, null);
     }
 
     private void update(){
