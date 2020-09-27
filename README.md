@@ -3,7 +3,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 详见项目代码中的 `RoundFrameLayout` 和 `RoundImageView`。
 
 # 更新日志
-[更新日志](https://github.com/xiaofei-dev/RoundWidget/blob/master/release_log.md)
+[点击查看](https://github.com/xiaofei-dev/RoundWidget/blob/master/release_log.md)
 
 # 界面预览
 
