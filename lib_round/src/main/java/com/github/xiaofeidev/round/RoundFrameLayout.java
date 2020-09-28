@@ -66,7 +66,8 @@ public class RoundFrameLayout extends FrameLayout implements RoundStatus {
             float topRightRadius;
             float bottomLeftRadius;
             float bottomRightRadius;
-            if (typedArray.peekValue(R.styleable.RoundFrameLayout_rd_radius).type == TypedValue.TYPE_DIMENSION){
+            if (typedArray.peekValue(R.styleable.RoundFrameLayout_rd_radius) != null &&
+                    typedArray.peekValue(R.styleable.RoundFrameLayout_rd_radius).type == TypedValue.TYPE_DIMENSION){
                 radius = typedArray.getDimension(R.styleable.RoundFrameLayout_rd_radius, 0);
             }else {//TypedValue.TYPE_INT_DEC
                 radius = typedArray.getInteger(R.styleable.RoundFrameLayout_rd_radius, 0);

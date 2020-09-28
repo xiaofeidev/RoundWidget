@@ -95,7 +95,8 @@ public class RoundImageView extends AppCompatImageView implements RoundStatus {
             float bottomLeftRadius;
             float bottomRightRadius;
 
-            if (typedArray.peekValue(R.styleable.RoundImageView_rd_radius).type == TypedValue.TYPE_DIMENSION){
+            if (typedArray.peekValue(R.styleable.RoundImageView_rd_radius) != null &&
+                    typedArray.peekValue(R.styleable.RoundImageView_rd_radius).type == TypedValue.TYPE_DIMENSION){
                 radius = typedArray.getDimension(R.styleable.RoundImageView_rd_radius, 0);
             }else {//TypedValue.TYPE_INT_DEC
                 radius = typedArray.getInteger(R.styleable.RoundImageView_rd_radius, 0);
