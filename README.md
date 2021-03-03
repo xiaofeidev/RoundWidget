@@ -17,6 +17,8 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 implementation 'com.github.xiaofeidev:round:$latest_version'
 ```
 
+*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*
+
 **本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
 
 项目中主要有  `RoundFrameLayout` 和 `RoundImageView`这两个控件，它们具有如下公共属性：
