@@ -1,4 +1,4 @@
-# RoundWidget [ ![Download](https://api.bintray.com/packages/xiaofei00/xiaofei/RoundWidget/images/download.svg) ](https://bintray.com/xiaofei00/xiaofei/RoundWidget/_latestVersion)
+# RoundWidget
 Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角 `ImageView`，
 详见项目代码中的 `RoundFrameLayout` 和 `RoundImageView`。
 
@@ -17,7 +17,15 @@ Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角
 implementation 'com.github.xiaofeidev:round:$latest_version'
 ```
 
-*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*
+~~*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*~~
+
+JCenter 官方的最新声明如下：
+
+> We listened to the community and will keep JCenter as a read-only repository indefinitely. Our customers and the community can continue to rely on JCenter as a reliable mirror for Java packages.
+>
+> 我们听取了社区的意见，并**<u>将 JCenter 无限期地保留为只读存储库</u>**。我们的客户和社区可以继续依赖 JCenter 作为 Java 包的可靠镜像。
+
+因此，在本库发新版本之前，老的版本可以继续依赖于 JCenter 下载。在发布下一个版本的时候我计划整体迁移到 MavenCentral，敬请关注。当前的版本无需做任何变动便可继续正常使用。
 
 **本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
 
