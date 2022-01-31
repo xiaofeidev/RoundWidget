@@ -25,6 +25,8 @@ JCenter 官方的最新声明如下：
 >
 > 我们听取了社区的意见，并**<u>将 JCenter 无限期地保留为只读存储库</u>**。我们的客户和社区可以继续依赖 JCenter 作为 Java 包的可靠镜像。
 
+[声明链接](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)
+
 因此，在本库发新版本之前，老的版本可以继续依赖于 JCenter 下载。在发布下一个版本的时候我计划整体迁移到 MavenCentral，敬请关注。当前的版本无需做任何变动便可继续正常使用。
 
 **本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
