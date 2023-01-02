@@ -1,6 +1,5 @@
 # RoundWidget
-Java 实现的 Android 原生圆角矩形控件，圆角 `FrameLayout` 和圆角 `ImageView`，
-详见项目代码中的 `RoundFrameLayout` 和 `RoundImageView`。
+Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`FrameLayout`，详见项目代码中的`RoundImageView`和`RoundFrameLayout`。
 
 # 更新日志
 [点击查看](https://github.com/xiaofei-dev/RoundWidget/blob/master/release_log.md)
@@ -31,7 +30,7 @@ JCenter 官方的最新声明如下：
 
 **本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
 
-项目中主要有  `RoundFrameLayout` 和 `RoundImageView`这两个控件，它们具有如下公共属性：
+项目中主要有`RoundImageView`和`RoundFrameLayout`这两个控件，它们具有如下公共属性：
 
 |         属性名         |                           解释                           |
 | :--------------------: | :------------------------------------------------------: |
@@ -47,28 +46,48 @@ JCenter 官方的最新声明如下：
 
 `RoundImageView`另外多了这几个独有的属性：
 
-
-
 |     属性名      |                      解释                       |
 | :-------------: | :---------------------------------------------: |
 | rd_stroke_width |        尺寸值，设置 ImageView 的描边宽度        |
 | rd_stroke_color |        颜色值，设置 ImageView 的描边颜色        |
 | rd_stroke_mode  | 枚举值，设置描边模式，取值为 padding 或 overlay |
 
-
-
 关于`rd_stroke_mode`属性，其含义是当前`RoundImageView`的描边模式，是一个枚举值，只能取 `padding` 或 `overlay`这两者之一。这两个枚举值含义如下：
-
-
 
 | `rd_stroke_mode` 枚举值 |                             解释                             |
 | :---------------------: | :----------------------------------------------------------: |
 |        `padding`        | 描边的像素不覆盖到下方的图片，通过增加 View padding 的方式实现，此为默认值 |
 |        `overlay`         |                描边的像素直接覆盖到下方图片上                |
 
-
-
 ### 示例
+
+`RoundImageView`：
+
+```xml
+<com.github.xiaofeidev.round.RoundImageView
+        android:id="@+id/imgS1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/text3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgS2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintDimensionRatio="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        app:rd_radius="10dp"
+        app:rd_stroke_width="4dp"
+        app:rd_stroke_color="@android:color/black"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/ic_profile"/>
+```
+
+效果：
+
+<img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_image.jpg">
+
+`RoundFrameLayout`：
 
 ```xml
 <com.github.xiaofeidev.round.RoundFrameLayout
@@ -97,29 +116,3 @@ JCenter 官方的最新声明如下：
 效果：
 
 <img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_frame.jpg">
-
-
-
-```xml
-<com.github.xiaofeidev.round.RoundImageView
-        android:id="@+id/imgS1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/text3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/imgS2"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintDimensionRatio="1"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="5dp"
-        app:rd_radius="10dp"
-        app:rd_stroke_width="4dp"
-        app:rd_stroke_color="@android:color/black"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        app:srcCompat="@drawable/ic_profile"/>
-```
-
-效果：
-
-<img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_image.jpg">
