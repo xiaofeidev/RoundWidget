@@ -1,6 +1,6 @@
 # RoundWidget
 
-本库的最新版本已成功发布至 mavenCentral
+本库的最新版本已成功发布至 mavenCentral，详见底部的说明
 
 Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`FrameLayout`，详见项目代码中的`RoundImageView`和`RoundFrameLayout`。
 
