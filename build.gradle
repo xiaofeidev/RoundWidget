@@ -24,6 +24,17 @@ allprojects {
         mavenCentral()
         jcenter()
     }
+
+    tasks.withType(Javadoc).all {
+        //乱码问题
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+        //javadoc 编译不通过问题
+        enabled = false
+    }
 }
 
 task clean(type: Delete) {
