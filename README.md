@@ -13,7 +13,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`Fra
 `Gradle`依赖：
 
 ```groovy
-implementation 'io.github.xiaofeidev:round:$latest_version'
+implementation 'io.github.xiaofeidev:round:1.1.2'
 ```
 
 本库的最新版本 1.1.2 已发布至 mavenCentral，注意 mavenCentral 仅提供 1.1.2 及更高版本的依赖！且本库自 1.1.2 版本(含 1.1.2 版本)之后仅会发布到 mavenCentral（旧版本依然可通过 jcenter 依赖且只能通过 jcenter 依赖）
