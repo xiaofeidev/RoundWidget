@@ -1,9 +1,11 @@
 # RoundWidget
+
 本库的最新版本已成功发布至 mavenCentral
 
 Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`FrameLayout`，详见项目代码中的`RoundImageView`和`RoundFrameLayout`。
 
 # 更新日志
+
 [点击查看](https://github.com/xiaofei-dev/RoundWidget/blob/master/release_log.md)
 
 # 界面预览
@@ -24,13 +26,13 @@ implementation 'io.github.xiaofeidev:round:1.1.2'
 
 项目中主要有`RoundImageView`和`RoundFrameLayout`这两个控件，它们具有如下公共属性：
 
-|         属性名         |                           解释                           |
-| :--------------------: | :------------------------------------------------------: |
+|         属性名         |                            解释                            |
+| :--------------------: | :--------------------------------------------------------: |
 |       rd_radius        | 尺寸值，设置 View 整体四个圆角的圆角半径，会被下面的值覆盖 |
-|   rd_top_left_radius   |            尺寸值，设置 View 左上角的圆角半径            |
-|  rd_top_right_radius   |            尺寸值，设置 View 右上角的圆角半径            |
-| rd_bottom_left_radius  |            尺寸值，设置 View 左下角的圆角半径            |
-| rd_bottom_right_radius |            尺寸值，设置 View 右下角的圆角半径             |
+|   rd_top_left_radius   |             尺寸值，设置 View 左上角的圆角半径             |
+|  rd_top_right_radius   |             尺寸值，设置 View 右上角的圆角半径             |
+| rd_bottom_left_radius  |             尺寸值，设置 View 左下角的圆角半径             |
+| rd_bottom_right_radius |             尺寸值，设置 View 右下角的圆角半径             |
 
 关于 `rd_radius` 属性，其除了通常尺寸值外还可以设置为一个内置的枚举值：`circle`，这样整个 View 会被裁剪成一个正圆形！
 
@@ -49,7 +51,7 @@ implementation 'io.github.xiaofeidev:round:1.1.2'
 | `rd_stroke_mode` 枚举值 |                             解释                             |
 | :---------------------: | :----------------------------------------------------------: |
 |        `padding`        | 描边的像素不覆盖到下方的图片，通过增加 View padding 的方式实现，此为默认值 |
-|        `overlay`         |                描边的像素直接覆盖到下方图片上                |
+|        `overlay`        |                描边的像素直接覆盖到下方图片上                |
 
 ### 示例
 
@@ -125,4 +127,10 @@ implementation 'io.github.xiaofeidev:round:1.1.2'
 >
 > *从老版本更新过来的朋友一定要注意在使用控件的地方同步修改下包路径*
 >
-> *包括本库的 gradle 依赖脚本也要由原来的 `implementation 'com.github.xxx'` 改成 `implementation 'io.github.xxx'*`
+> *包括本库的 gradle 依赖脚本也要由原来的：*
+>
+> *`implementation 'com.github.xxx'`*
+>
+> *改为：*
+>
+> *`implementation 'io.github.xxx'`* 
