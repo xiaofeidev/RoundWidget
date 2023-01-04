@@ -26,7 +26,11 @@ implementation 'io.github.xiaofeidev:round:1.1.2'
 
 `io.github.xiaofeidev.xxx`
 
+(这是 mavenCentral 对只有 github 地址的库的发布要求，要求库的 groupID 必须是 io.github.XXX，而不能是 com.github.XXX)
+
 从老版本更新过来的朋友一定要注意在使用控件的地方同步修改下包路径
+
+包括本库的 gradle 依赖脚本也要由原来的 `implementation 'com.github.xxx'` 改成 `implementation 'io.github.xxx'`
 
 ~~*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*~~
 
