@@ -18,33 +18,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`Fra
 implementation 'io.github.xiaofeidev:round:1.1.2'
 ```
 
-本库的最新版本 1.1.2 已发布至 mavenCentral，注意 mavenCentral 仅提供 1.1.2 及更高版本的依赖！且本库自 1.1.2 版本(含 1.1.2 版本)之后仅会发布到 mavenCentral（旧版本依然可通过 jcenter 依赖且只能通过 jcenter 依赖）
 
-还有一点需要注意的是本库自 1.1.2 版本起修改了控件的包路径，从：
-
-`com.github.xiaofeidev.xxx`
-
-修改为了：
-
-`io.github.xiaofeidev.xxx`
-
-(这是 mavenCentral 对只有 github 地址的库的发布要求，要求库的 groupID 必须是 io.github.XXX，而不能是 com.github.XXX)
-
-从老版本更新过来的朋友一定要注意在使用控件的地方同步修改下包路径
-
-包括本库的 gradle 依赖脚本也要由原来的 `implementation 'com.github.xxx'` 改成 `implementation 'io.github.xxx'`
-
-~~*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*~~
-
-~~JCenter 官方的最新声明如下：~~
-
-> ~~We listened to the community and will keep JCenter as a read-only repository indefinitely. Our customers and the community can continue to rely on JCenter as a reliable mirror for Java packages.~~
->
-> ~~我们听取了社区的意见，并**<u>将 JCenter 无限期地保留为只读存储库</u>**。我们的客户和社区可以继续依赖 JCenter 作为 Java 包的可靠镜像。~~
-
-~~[声明链接](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/)~~
-
-~~因此，在本库发新版本之前，老的版本可以继续依赖于 JCenter 下载。在发布下一个版本的时候我计划整体迁移到 MavenCentral，敬请关注。当前的版本无需做任何变动便可继续正常使用。~~
 
 **本库只支持在 `AndroidX` 的依赖基础上使用！**`miniSDK` = 14
 
@@ -134,3 +108,21 @@ implementation 'io.github.xiaofeidev:round:1.1.2'
 效果：
 
 <img src="https://github.com/xiaofei-dev/RoundWidget/blob/master/art/img_shot_frame.jpg">
+
+# 说明
+
+> *本库的最新版本 1.1.2 已发布至 mavenCentral，注意 mavenCentral 仅提供 1.1.2 及更高版本的依赖！且本库自 1.1.2 版本(含 1.1.2 版本)之后仅会发布到 mavenCentral（旧版本依然可通过 jcenter 依赖且只能通过 jcenter 依赖）*
+>
+> *还有一点需要注意的是本库自 1.1.2 版本起修改了控件的包路径，从：*
+>
+> *`com.github.xiaofeidev.xxx`*
+>
+> *修改为了：*
+>
+> *`io.github.xiaofeidev.xxx`*
+>
+> *(这是 mavenCentral 对只有 github 地址的库的发布要求，要求库的 groupID 必须是 io.github.XXX，而不能是 com.github.XXX)*
+>
+> *从老版本更新过来的朋友一定要注意在使用控件的地方同步修改下包路径*
+>
+> *包括本库的 gradle 依赖脚本也要由原来的 `implementation 'com.github.xxx'` 改成 `implementation 'io.github.xxx'*`
