@@ -1,4 +1,4 @@
-package com.github.xiaofeidev.round;
+package io.github.xiaofeidev.round;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -20,8 +20,8 @@ import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.github.xiaofeidev.round.round.RoundStatus;
-import com.github.xiaofeidev.round.round.RoundStatusImpl;
+import io.github.xiaofeidev.round.round.RoundStatus;
+import io.github.xiaofeidev.round.round.RoundStatusImpl;
 
 /**
  * <p>圆角或圆形裁剪的 FrameLayout，裁剪画布实现我暂时想不到方法能消除边缘锯齿，所以只能用 PorterDuffXfermode</p>

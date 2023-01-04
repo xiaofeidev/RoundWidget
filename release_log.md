@@ -1,3 +1,7 @@
+# 1.1.2
+
+从 jcenter 迁移到 mavenCentral
+
 # 1.1.1
 
 修复潜在空指针异常

@@ -13,7 +13,7 @@ Java 实现的 Android 原生圆角矩形控件，圆角`ImageView`和圆角`Fra
 `Gradle`依赖：
 
 ```groovy
-implementation 'com.github.xiaofeidev:round:$latest_version'
+implementation 'io.github.xiaofeidev:round:$latest_version'
 ```
 
 ~~*JCenter 的工件库托管服务将于 2022 年 2 月 1 号停止，本库将会在此之前及时迁移到新的远程 Maven 仓库，大家请放心使用。*~~
@@ -64,7 +64,7 @@ JCenter 官方的最新声明如下：
 `RoundImageView`：
 
 ```xml
-<com.github.xiaofeidev.round.RoundImageView
+<io.github.xiaofeidev.round.RoundImageView
         android:id="@+id/imgS1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -90,7 +90,7 @@ JCenter 官方的最新声明如下：
 `RoundFrameLayout`：
 
 ```xml
-<com.github.xiaofeidev.round.RoundFrameLayout
+<io.github.xiaofeidev.round.RoundFrameLayout
         android:id="@+id/frame1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -110,7 +110,7 @@ JCenter 官方的最新声明如下：
             android:scaleType="fitXY"
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/ic_profile"/>
-</com.github.xiaofeidev.round.RoundFrameLayout>
+</io.github.xiaofeidev.round.RoundFrameLayout>
 ```
 
 效果：
